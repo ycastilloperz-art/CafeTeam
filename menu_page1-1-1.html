@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú Todo&TODO - Bebidas</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Raleway', sans-serif;
+    background: white;
+    color: #333;
+  }
+
+  .page {
+    width: 794px;
+    min-height: 1123px;
+    margin: 0 auto;
+    background: white;
+    padding: 36px 48px 36px 48px;
+    position: relative;
+  }
+
+  /* HEADER */
+  .header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 28px;
+  }
+
+  .menu-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 58px;
+    font-weight: 300;
+    letter-spacing: 18px;
+    color: #222;
+    line-height: 1;
+  }
+
+  .header-right {
+    text-align: right;
+    padding-top: 6px;
+  }
+
+  .script-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px;
+    color: #b8860b;
+    line-height: 1.1;
+  }
+
+  .open-hours {
+    font-size: 11px;
+    color: #555;
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+
+  /* SECTION HEADERS */
+  .section-label-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+
+  .section-icon {
+    font-size: 28px;
+    color: #555;
+    min-width: 40px;
+  }
+
+  .section-name {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #b8860b;
+    text-transform: uppercase;
+    border-bottom: 2px solid #b8860b;
+    padding-bottom: 4px;
+    flex: 1;
+  }
+
+  .big-section-label {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    color: #222;
+    text-transform: uppercase;
+    text-align: right;
+    flex: 1;
+  }
+
+  /* ITEMS */
+  .items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 40px;
+    padding: 10px 0 10px 54px;
+  }
+
+  .items-single {
+    padding: 10px 0 10px 54px;
+  }
+
+  .item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 3.5px 0;
+    font-size: 13.5px;
+    color: #333;
+  }
+
+  .item-name { font-weight: 400; }
+  .item-price { font-weight: 400; white-space: nowrap; margin-left: 8px; }
+
+  /* DIVIDERS */
+  .section-divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 18px 0;
+  }
+
+  /* TWO-COLUMN SPLIT SECTION */
+  .two-col-section {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 0 20px;
+    margin: 0;
+  }
+
+  .col-divider {
+    background: #ddd;
+    width: 1px;
+  }
+
+  /* LOGO */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .logo-circle {
+    width: 160px;
+    height: 160px;
+    border: 2.5px solid #b8860b;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .logo-icon { font-size: 30px; color: #b8860b; }
+  .logo-main {
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #b8860b;
+    line-height: 1;
+  }
+  .logo-ampersand { color: #222; }
+  .logo-sub {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #555;
+    text-transform: uppercase;
+    margin-top: 3px;
+  }
+
+  /* CAFES FRIOS + TE ROW */
+  .mid-section {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 0 20px;
+  }
+
+  .mid-header-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .small-icon { font-size: 22px; color: #555; }
+
+  .section-name-te {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #b8860b;
+    text-transform: uppercase;
+    border-bottom: 2px solid #b8860b;
+    padding-bottom: 4px;
+    flex: 1;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="menu-title">MENU</div>
+    <div class="header-right">
+      <div class="script-title">para un lugar de café</div>
+      <div class="open-hours">Open Hours: 8am – 6pm</div>
+    </div>
+  </div>
+
+  <!-- CAFÉS + BEBIDAS heading row -->
+  <div class="section-label-row">
+    <div class="section-icon">☕</div>
+    <div class="section-name">CAFÉS</div>
+    <div class="big-section-label">B E B I D A S</div>
+  </div>
+  <hr class="section-divider" style="margin-top:0;">
+
+  <!-- Cafés items + Logo -->
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 20px; padding: 4px 0 4px 54px;">
+    <div>
+      <div class="item-row"><span class="item-name">Café espresso</span><span class="item-price">550 $</span></div>
+      <div class="item-row"><span class="item-name">Café espresso doble</span><span class="item-price">690 $</span></div>
+      <div class="item-row"><span class="item-name">Café americano</span><span class="item-price">760 $</span></div>
+      <div class="item-row"><span class="item-name">Café Machiatto</span><span class="item-price">650 $</span></div>
+      <div class="item-row"><span class="item-name">Café Cortado</span><span class="item-price">690 $</span></div>
+      <div class="item-row"><span class="item-name">Café Capuchino</span><span class="item-price">1000 $</span></div>
+      <div class="item-row"><span class="item-name">Café mocca</span><span class="item-price">1420 $</span></div>
+      <div class="item-row"><span class="item-name">Café con leche</span><span class="item-price">900 $</span></div>
+      <div class="item-row"><span class="item-name">Café latte</span><span class="item-price">1160 $</span></div>
+      <div class="item-row"><span class="item-name">Café Flat White</span><span class="item-price">1000 $</span></div>
+    </div>
+    <div class="logo-container">
+      <div class="logo-circle">
+        <div class="logo-icon">☕</div>
+        <div class="logo-main">Todo<span class="logo-ampersand">&</span><br>TODO</div>
+        <div class="logo-sub">para un lugar de café</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- CAFÉS FRÍOS + TE -->
+  <div class="mid-section">
+    <!-- Left: Cafés Fríos -->
+    <div>
+      <div class="mid-header-row">
+        <div class="small-icon">🧊</div>
+        <div class="section-name">CAFÉS FRÍOS</div>
+        <div style="font-size:18px; color:#555; margin-left:8px;">🥤</div>
+      </div>
+      <div class="items-single" style="padding-left:0;">
+        <div class="item-row"><span class="item-name">Frappuccino simple</span><span class="item-price">1520 $</span></div>
+        <div class="item-row"><span class="item-name">Frappuccino caramelo</span><span class="item-price">1660 $</span></div>
+        <div class="item-row"><span class="item-name">Frappuccino Mocca</span><span class="item-price">1700 $</span></div>
+        <div class="item-row"><span class="item-name">Iced coffe</span><span class="item-price">1100 $</span></div>
+        <div class="item-row"><span class="item-name">Iced Caramel Machiatto</span><span class="item-price">1420 $</span></div>
+      </div>
+    </div>
+    <div class="col-divider"></div>
+    <!-- Right: Te -->
+    <div>
+      <div class="mid-header-row">
+        <div class="section-name-te">TE</div>
+      </div>
+      <div class="items-single" style="padding-left:0;">
+        <div class="item-row"><span class="item-name">Te negro caliente</span><span class="item-price">450 $</span></div>
+        <div class="item-row"><span class="item-name">Te frío de limón</span><span class="item-price">580 $</span></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- BEBIDAS -->
+  <div class="section-label-row">
+    <div class="section-icon">🥤</div>
+    <div class="section-name">BEBIDAS</div>
+  </div>
+  <hr class="section-divider" style="margin-top:0;">
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 40px; padding: 4px 0 4px 54px;">
+    <div>
+      <div class="item-row"><span class="item-name">Smoothie de frutas</span><span class="item-price">2420 $</span></div>
+      <div class="item-row"><span class="item-name">Jugo bifrutas tropical</span><span class="item-price">630 $</span></div>
+      <div class="item-row"><span class="item-name">Jugo bifrutas mediterráneo</span><span class="item-price">630 $</span></div>
+      <div class="item-row"><span class="item-name">Yogurt ice creamy natural</span><span class="item-price">740 $</span></div>
+      <div class="item-row"><span class="item-name">Yogurt líquido plátano</span><span class="item-price">740 $</span></div>
+      <div class="item-row"><span class="item-name">Malta</span><span class="item-price">580 $</span></div>
+    </div>
+    <div>
+      <div class="item-row"><span class="item-name">Refresco de cola</span><span class="item-price">620 $</span></div>
+      <div class="item-row"><span class="item-name">Refresco de limón</span><span class="item-price">620 $</span></div>
+      <div class="item-row"><span class="item-name">Néctar de naranja</span><span class="item-price">670 $</span></div>
+      <div class="item-row"><span class="item-name">Néctar de piña</span><span class="item-price">670 $</span></div>
+      <div class="item-row"><span class="item-name">Agua Mineral Natural Aquadeus</span><span class="item-price">420 $</span></div>
+      <div class="item-row"><span class="item-name">Energizante Red Bull</span><span class="item-price">850 $</span></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
